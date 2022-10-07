@@ -6,18 +6,24 @@ import { apiUrl } from "./api/url";
 import { ICardProps } from "../../interfaces";
 
 import { Card } from "../components/Card";
-import { Loading } from "../components/Loading";
 
 import { Container, Content } from "../styles/pages/home";
 import { MagnifyingGlass } from "phosphor-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface HomeProps extends ICardProps{}
 
 export default function Home({ data }) {
- const char = data.results as HomeProps[]
+ const {info, results: defaultResults = [] } = data
  const [characterSelected, setCharacterSelected] = useState<ICardProps[]>([])
  const [characterByStatus, setCharacterByStatus] = useState<ICardProps[]>([])
+ const [results, setResults] = useState(defaultResults)
+ const [page, setPage] = useState({
+  ...info,
+  current: apiUrl
+ })
+
+ const { current } = page
 
  function handleSearchCharByName(event: any) {
     event.preventDefault()
@@ -26,19 +32,55 @@ export default function Home({ data }) {
     const strRest = str.slice(1).toLowerCase()
     const newStr = `${firstLetter}${strRest}`
 
-    const result = char.filter(item => item.name?.includes(newStr))
+    const result = results.filter(item => item.name?.includes(newStr))
     setCharacterSelected(result)
   }
 
   function handleFilterCharByStatus(event: any) {
     event.preventDefault()
 
-    const result = char.filter(item => item.status === event.target.value);
+    const result = results.filter(item => item.status === event.target.value);
     setCharacterByStatus(result)
   }
 
-  const arr = char.map(item => item.status)
+  const arr = results.map(item => item.status)
   const filteredArr = arr.filter((item, i) => arr.indexOf(item) === i)
+
+  useEffect(() => {
+    if(current === apiUrl) return;
+
+    async function request() {
+      const res = await fetch(current)
+      const nextData = await res.json();
+
+      setPage({
+        current,
+        ...nextData.info
+      });
+
+      if(!nextData.info?.prev) {
+        setResults(nextData.results)
+        return;
+      };
+
+      setResults(prev => {
+        return [
+          ...prev,
+          ...nextData.results
+        ]
+      })
+    }
+    request()
+  }, [current])
+
+  function handleLoadMoreChars() {
+    setPage(prev => {
+      return {
+        ...prev,
+        current: page?.next
+      }
+    })
+  }
 
   return (
     <Content>
@@ -73,7 +115,7 @@ export default function Home({ data }) {
       </div>
 
       <Container>
-        {characterSelected.length === 0 && characterByStatus.length === 0 ? char.map(item => {
+        {characterSelected.length === 0 && characterByStatus.length === 0 ? results.map(item => {
           return (
             <Link 
               key={item.id}
@@ -122,13 +164,15 @@ export default function Home({ data }) {
           </Link>
           )
         }) }     
+
       </Container>
+        <button onClick={handleLoadMoreChars}>Load more</button>
     </Content>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch(apiUrl + '/character')
+  const response = await fetch(apiUrl)
   const data = await response.json();
   
   return {

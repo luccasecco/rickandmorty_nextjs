@@ -31,7 +31,7 @@ export default function Char({ character }){
 export const getServerSideProps: GetServerSideProps<any, {id: string }> = async ({ params }) => {
   const charId = params.id
 
-  const response = await fetch(apiUrl + `/character/${charId}`)
+  const response = await fetch(apiUrl + `/${charId}`)
   const character = await response.json()
 
   return {

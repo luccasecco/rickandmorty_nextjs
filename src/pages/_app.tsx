@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 import { ThemeProvider } from "styled-components";
@@ -13,6 +13,10 @@ function App({ Component, pageProps }) {
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
   }
+
+  useEffect(() => {
+    toggleTheme()
+  }, [])
   
   return (
   <ThemeProvider theme={theme}>
