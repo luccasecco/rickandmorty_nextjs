@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.a`
   width: 20rem;
   height: 40rem;
   padding: 1rem;
   background-color: ${props => props.theme.colors.primary};
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ export const Container = styled.div`
 
 `
 
-export const ImgBox = styled.div`
+export const ImgBox = styled.a`
   display: flex;
   align-items: center;
   justify-Content: center;
@@ -35,5 +35,6 @@ export const ImgBox = styled.div`
     height: 18rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    cursor: pointer;
   }
 `

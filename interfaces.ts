@@ -1,5 +1,5 @@
 export interface ICardProps {
-  id?: string;
+  id: string;
   name: string;
   image : string;
   status: string;

@@ -9,14 +9,14 @@ export function Card({
     image, 
     status, 
     species, 
-    gender, 
+    gender,
   }: ICardProps) {
 
   return(
     <Container>
       <ImgBox>
         <Link href={`/char/${id}`}>
-          <img src={image} alt="" width={25} height={35}/>
+          <img src={image} alt={name}/>
         </Link>
       </ImgBox>
       
