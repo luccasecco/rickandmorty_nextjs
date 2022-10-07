@@ -1,30 +1,38 @@
-import { GetServerSideProps } from "next";
-import { ICardProps } from "../../interfaces";
-import { Card } from "../components/Card";
-import { Loading } from "../components/Loading";
-import { Container, Content } from "../styles/home";
+import { GetStaticProps } from "next";
+import Link from 'next/link';
+
 import { apiUrl } from "./api/url";
 
-interface HomeProps {
-  characters: ICardProps[]
-}
+import { ICardProps } from "../../interfaces";
+
+import { Card } from "../components/Card";
+import { Loading } from "../components/Loading";
+
+import { Container, Content } from "../styles/home";
+
+interface HomeProps extends ICardProps{}
 
 export default function Home({ data }) {
- const char = data.results
+ const char = data.results as HomeProps[]
 
   return (
     <Content>
       <Container>
         {char ? char.map(item => {
           return (
-            <Card 
+            <Link 
               key={item.id}
-              image={item.image}
-              name={item.name}
-              status={item.status}
-              species={item.species}
-              gender={item.gender}          
-            />
+              href={`char/${item.id}`}
+            >
+              <Card 
+               
+                image={item.image}
+                name={item.name}
+                status={item.status}
+                species={item.species}
+                gender={item.gender}          
+              />
+            </Link>
           )
         }) : <Loading />}     
       </Container>
@@ -32,7 +40,7 @@ export default function Home({ data }) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch(apiUrl + '/character')
   const data = await response.json();
   
@@ -40,5 +48,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       data
     },
+    revalidate: 60 * 60 * 2
   }
 }

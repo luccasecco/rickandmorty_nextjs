@@ -1,10 +1,10 @@
-import Image from "next/image";
 import { Alien, Circle, GenderFemale, GenderMale, Person } from "phosphor-react";
+import Link from 'next/link';
 import { ICardProps } from "../../interfaces";
 import { Container, ImgBox } from "../styles/components/card";
-import { Content } from "../styles/home";
 
 export function Card({
+    id,
     name, 
     image, 
     status, 
@@ -15,7 +15,9 @@ export function Card({
   return(
     <Container>
       <ImgBox>
-        <img src={image} alt="" width={25} height={35}/>
+        <Link href={`/char/${id}`}>
+          <img src={image} alt="" width={25} height={35}/>
+        </Link>
       </ImgBox>
       
         <h1>{name}</h1>
@@ -29,7 +31,7 @@ export function Card({
         </p>
         <p>
           {species === 'Human' ? 
-          <Person size={20} weight="fill" color="#262626" /> 
+          <Person size={20} weight="fill" color="#6d28d9" /> 
           : 
           <Alien size={20} weight="fill" color="#facc15" />
           }
@@ -39,7 +41,7 @@ export function Card({
           {gender === 'Male' ? 
           <GenderMale size={20} weight="fill" color="#1d4ed8"/> 
           : 
-          <GenderFemale size={20} weight="fill" color="#7e22ce" />
+          <GenderFemale size={20} weight="fill" color="#be185d" />
           }
           {gender}
         </p>
