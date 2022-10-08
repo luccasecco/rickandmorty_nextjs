@@ -25,7 +25,7 @@ export const Content = styled.div`
   .search-box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     label {
     display: flex;
     align-items: center;
