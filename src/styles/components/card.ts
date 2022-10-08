@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.a`
-  width: 16rem;
-  height: 35rem;
+  width: 20rem;
   padding: 1rem;
   background-color: ${props => props.theme.colors.primary};
   border-radius: 8px;
@@ -20,6 +19,7 @@ export const Container = styled.a`
   p {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
   }
 
@@ -44,8 +44,8 @@ export const ImgBox = styled.a`
   justify-Content: center;
 
   img {
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     cursor: pointer;

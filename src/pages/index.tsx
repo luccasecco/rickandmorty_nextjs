@@ -127,7 +127,7 @@ export default function Home({ data }) {
               <Card 
                 id={item.id}
                 image={item.image}
-                name={item.name}
+                name={item.name.length <= 12 ? item.name : item.name.slice(0, 12) + '...'}
                 status={item.status}
                 species={item.species}
                 gender={item.gender}          

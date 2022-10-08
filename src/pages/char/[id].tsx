@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
-import { ArrowArcLeft } from "phosphor-react";
+import { ArrowLeft } from "phosphor-react";
 import { Container, Content } from "../../styles/pages/char";
 import { apiUrl } from "../api/url";
 
@@ -9,7 +9,9 @@ export default function Char({ character }){
   return(
     <Container>
       <div className="button-wrapper">
-        <Link href='/'><ArrowArcLeft size={32} style={{ cursor: 'pointer'}} /></Link>
+        <Link href='/'>
+          <ArrowLeft size={32} weight="bold" style={{cursor: 'pointer'}} />
+        </Link>
       </div>
       <Content>
         <div className="content">
