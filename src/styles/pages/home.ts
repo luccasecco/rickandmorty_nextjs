@@ -44,6 +44,12 @@ export const Content = styled.div`
       };
    };
 
+   label {
+      @media (max-width: 280px) {
+        display: none;
+      };
+   };
+
     input {
       width: 100%;
       color: ${props => props.theme.colors.primary};
@@ -85,6 +91,7 @@ export const Content = styled.div`
       width: 20%;
       margin: 1rem auto;
     };
+
   };
 
   button {

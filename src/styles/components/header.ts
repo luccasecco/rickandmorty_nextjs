@@ -11,6 +11,7 @@ export const Container = styled.header`
     width: 75rem;
     margin: 0 auto;
     color: ${props => props.theme.title};
+
     a{
       text-decoration: none;
       color: ${props => props.theme.colors.text};
@@ -20,6 +21,7 @@ export const Container = styled.header`
         color: ${props => props.theme.colors.secundary}; 
       }
     }
+
     .switch {
       padding: 0 2%;
     }
