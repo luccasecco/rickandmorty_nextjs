@@ -14,19 +14,19 @@ export const Container = styled.a`
   h1 {
     text-align: center;
     margin-bottom: 1rem;
-  }
+  };
 
   p {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-  }
+  };
 
   &:hover {
     transform: scale(1.1);
     border: 1px solid ${props => props.theme.colors.strong};
-  }
+  };
 
   div {
     margin-top: auto;
@@ -34,9 +34,8 @@ export const Container = styled.a`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-  }
-
-`
+  };
+`;
 
 export const ImgBox = styled.a`
   display: flex;
@@ -49,5 +48,5 @@ export const ImgBox = styled.a`
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     cursor: pointer;
-  }
-`
+  };
+`;

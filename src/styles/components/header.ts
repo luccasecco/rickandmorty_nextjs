@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const Container = styled.header`
   max-width: 100%;
   padding: 2rem 5rem;
@@ -19,8 +20,8 @@ export const Container = styled.header`
   
       &:hover{
         color: ${props => props.theme.colors.secundary}; 
-      }
-    }
+      };
+    };
 
     .switch {
       padding: 0 2%;
@@ -28,15 +29,15 @@ export const Container = styled.header`
       .checkedIcon, .uncheckedIcon{
         display: flex;
         flex-direction: column;
-      }
-    }
+      };
+    };
     
-        @media (max-width: 1000px) {
-          max-width: 100%;
-          flex-direction: column;
-          font-size: 0.7rem;
-          text-align: center;
-          gap: 1rem;
-        }
-  }
+    @media (max-width: 1000px) {
+      max-width: 100%;
+      flex-direction: column;
+      font-size: 0.7rem;
+      text-align: center;
+      gap: 1rem;
+    };
+  };
 `

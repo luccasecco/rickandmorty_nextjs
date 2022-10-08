@@ -23,17 +23,22 @@ export const Content = styled.div`
   justify-content: center;
 
   .search-box {
+    max-width: 75rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 22.5rem;
+    margin: 0 auto;
+
     label {
     display: flex;
     align-items: center;
+
     gap: 1rem;
-    width: 25rem;
     border-radius: 8px;
     padding: 1rem;
     background: ${props => props.theme.colors.secundary};
+    
 
       svg {
         color: ${props => props.theme.colors.primary}
@@ -51,7 +56,7 @@ export const Content = styled.div`
    };
 
     input {
-      width: 100%;
+      width: 25rem;
       color: ${props => props.theme.colors.primary};
       background: transparent;
       border: 0;
