@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+![RickAndMorty-capa](https://user-images.githubusercontent.com/101674470/194730275-8cedb21b-b808-43e3-bf3e-545c04f29f75.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<p align="justify">Projeto em Next.js. Faz a busca dos personagens da série de desenho animado Rick And Morty na api e renderiza em página. A aplicação permite ao usuário buscar personagem por nome bem como filtrá-los por status ("Alive", "Dead" ou "Unknow"). Quando selecionado o personagem, abre nova tela com mais informações.</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<hr />
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<hr />
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Funcionalidades
 
-## Learn More
+- ``Buscar personagem``: Ao digitar um nome retorna os personagens que contém o valor digitado no campo de busca.
+- ``Filtar por status``: Ao selecionar opção de status (vivo, morto ou desconhecido) retorna personagens correspondentes.
+- ``Selecionar personagem``: Ao clicar em um personagem abre nova página com descrições sobre o item selecionado.
 
-To learn more about Next.js, take a look at the following resources:
+## Acesso ao projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1) Clone o projeto
+`git clone https://github.com/luccasecco/rickandmorty_nextjs.git`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 2) Vá para o diretório do projeto
+`cd rickandmorty_nextjs`
 
-## Deploy on Vercel
+### 3) Instale as dependências
+`npm install`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3) Inicialize o projeto
+`npm run dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Técnicas e tecnologias utilizadas
+
+- [React](https://pt-br.reactjs.org/docs/react-component.html)
+- [Next.js](https://nextjs.org/)
+- [Phosphor Icons](https://phosphoricons.com/)
+- [Styled-Components](https://styled-components.com/)
+- [React-switch](https://www.npmjs.com/package/react-switch)
+
+
+<p align="center">
+   <a href="https://www.linkedin.com/in/luccaseccodev/">
+      <img alt="Lucca Secco" src="https://img.shields.io/badge/-Lucca Secco-2A2C39?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+</p>
+
+# :computer: Autor
+
+<table>
+ <td align="center">
+      <a href="http://github.com/luccasecco/">
+        <img src="https://github.com/luccasecco.png" width="100px;" alt="Lucca Secco"/>
+        <br />
+        <sub>
+          <b>Lucca Secco</b>
+        </sub>
+       </a>
+       <br />
+       <a href="https://www.linkedin.com/in/luccaseccodev/" title="Linkedin">@luccasecco</a>
+       <br />
+       <a href="https://www.linkedin.com/in/luccaseccodev/" title="Code">💻</a>
+    </td>
+</table>
