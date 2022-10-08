@@ -16,11 +16,12 @@ export default function Char({ character }){
           <img src={character.image} alt={character.name} width={320}/>
           <div className="text">
             <h1>{character.name}</h1>
-            <p>{character.status}</p>
-            <p>{character.species}</p>
-            <p>{character.gender}</p>
-            <p>{character.origin.name}</p>
-            <p>{character.location.name}</p>
+            <p> <strong>Status:</strong> {character.status}</p>
+            <p><strong>Species:</strong> {character.species}</p>
+            <p><strong>Gender:</strong> {character.gender}</p>
+            <p><strong>Origin:</strong> {character.origin.name}</p>
+            <p><strong>Location:</strong> {character.location.name}</p>
+            <p><strong>Apparitions:</strong> {character.episode.length} episodes</p>
           </div>
         </div>
       </Content>

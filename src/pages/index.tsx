@@ -8,7 +8,7 @@ import { ICardProps } from "../../interfaces";
 import { Card } from "../components/Card";
 
 import { Container, Content } from "../styles/pages/home";
-import { MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass, PlusCircle } from "phosphor-react";
 import { useEffect, useState } from "react";
 
 interface HomeProps extends ICardProps{}
@@ -89,7 +89,7 @@ export default function Home({ data }) {
           <MagnifyingGlass size={20} />
           <input
             name="search-country"
-            type="text" placeholder="Search for a country..."
+            type="text" placeholder="Search for a character..."
             onChange={handleSearchCharByName}
           />
         </label>
@@ -166,7 +166,10 @@ export default function Home({ data }) {
         }) }     
 
       </Container>
-        <button onClick={handleLoadMoreChars}>Load more</button>
+        <button onClick={handleLoadMoreChars}>
+          <PlusCircle size={32} weight="bold" />
+          More chars
+        </button>
     </Content>
   )
 }
