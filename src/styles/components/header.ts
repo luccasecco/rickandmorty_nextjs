@@ -24,6 +24,11 @@ export const Container = styled.header`
 
     .switch {
       padding: 0 2%;
+
+      .checkedIcon, .uncheckedIcon{
+        display: flex;
+        flex-direction: column;
+      }
     }
     
         @media (max-width: 1000px) {

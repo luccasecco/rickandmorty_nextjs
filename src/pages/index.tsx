@@ -80,6 +80,9 @@ export default function Home({ data }) {
         current: page?.next
       }
     })
+
+    setCharacterSelected([]);
+    setCharacterByStatus([]);
   }
 
   return (
