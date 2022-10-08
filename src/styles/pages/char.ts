@@ -63,6 +63,11 @@ export const Content = styled.div`
       width: 25rem;
       border-radius: 8px;
       border: 2px solid ${props => props.theme.colors.strong};
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.2);
+      };
  
       @media (max-width: 1000px) {
        width: 15rem;

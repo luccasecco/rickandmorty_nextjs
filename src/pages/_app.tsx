@@ -9,20 +9,21 @@ import light from "../styles/themes/light";
 
 function App({ Component, pageProps }) {
   const [theme, setTheme] = useState(light)
+  const [isMounted, setIsMounted] = useState(false)
   
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
   }
 
   useEffect(() => {
-    toggleTheme()
+    setIsMounted(true)
   }, [])
   
   return (
   <ThemeProvider theme={theme}>
     <Header toggleTheme={toggleTheme} />
     <GlobalStyle />
-    <Component {...pageProps} />
+    {isMounted && <Component {...pageProps} />}
   </ThemeProvider>
 
   )
