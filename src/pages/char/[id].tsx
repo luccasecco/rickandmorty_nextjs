@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import { ArrowArcLeft } from "phosphor-react";
 import { Container, Content } from "../../styles/pages/char";
@@ -29,7 +29,14 @@ export default function Char({ character }){
   )
 }
 
-export const getServerSideProps: GetServerSideProps<any, {id: string }> = async ({ params }) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: true,
+  }
+}
+
+export const getStaticProps: GetStaticProps<any, {id: string }> = async ({ params }) => {
   const charId = params.id
 
   const response = await fetch(apiUrl + `/${charId}`)
