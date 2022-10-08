@@ -11,25 +11,24 @@ export const Container = styled.main`
 
   .button-wrapper{
     margin: 2rem 0 0;
-
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      width: 7rem;
-      padding: .5rem 1rem;
-      border: 0;
-      cursor: pointer;
-      color: ${props => props.theme.colors.text};
-      background: ${props => props.theme.colors.primary};
-      box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.6);
-      transition: filter 0.2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 7rem;
+    padding: .5rem 1rem;
+    border: 0;
+    cursor: pointer;
+    color: ${props => props.theme.colors.text};
+    background: ${props => props.theme.colors.primary};
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.6);
+    transition: filter 0.2;
 
       &:hover {
         filter: brightness(1.1);
       };
-    };
+    
 
     @media (max-width: 1000px) {
       margin: 2rem auto;
