@@ -29,9 +29,8 @@ export function Header({toggleTheme}: HeaderProps){
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    backgroundColor: '#075985',
                     borderRadius: '50%',
-                    color: '#fff',
+                    color: '#075985',
                     lineHeight: 0,
                   }}
                 >
@@ -48,8 +47,7 @@ export function Header({toggleTheme}: HeaderProps){
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    backgroundColor: "#eab308",
-                    color: "black",
+                    color: "#d19f09",
                     borderRadius: '50%',
                     lineHeight: 0,
                   }}
