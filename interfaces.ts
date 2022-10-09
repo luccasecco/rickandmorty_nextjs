@@ -22,3 +22,12 @@ export interface ICharProps {
     episode: number[]
   }
 }
+
+export interface HomeProps{
+  data: {
+    info: {
+      next: string;
+    }
+    results: ICardProps[],
+  }
+}
