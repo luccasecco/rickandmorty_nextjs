@@ -7,7 +7,7 @@
 <hr />
 
 <p align="center">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
 
 <hr />
@@ -49,13 +49,7 @@ https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8
 - [React-switch](https://www.npmjs.com/package/react-switch)
 
 
-<p align="center">
-   <a href="https://www.linkedin.com/in/luccaseccodev/">
-      <img alt="Lucca Secco" src="https://img.shields.io/badge/-Lucca Secco-2A2C39?style=flat&logo=Linkedin&logoColor=white" />
-   </a>
-</p>
-
-# :computer: Autor
+# Autor
 
 <table>
  <td align="center">
@@ -72,3 +66,11 @@ https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8
        <a href="https://www.linkedin.com/in/luccaseccodev/" title="Code">💻</a>
     </td>
 </table>
+
+<hr />
+
+<p align="center">
+   <a href="https://www.linkedin.com/in/luccaseccodev/">
+      <img alt="Lucca Secco" src="https://img.shields.io/badge/-Lucca Secco-2A2C39?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+</p>
