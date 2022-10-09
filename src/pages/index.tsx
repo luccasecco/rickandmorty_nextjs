@@ -1,5 +1,6 @@
-import { GetServerSideProps } from "next";
 import Link from 'next/link';
+import { GetServerSideProps } from "next";
+import { ChangeEvent, useEffect, useState } from "react";
 
 import { apiUrl } from "./api/url";
 
@@ -9,7 +10,6 @@ import { Card } from "../components/Card";
 
 import { Container, Content } from "../styles/pages/home";
 import { MagnifyingGlass, PlusCircle } from "phosphor-react";
-import { ChangeEvent, useEffect, useState } from "react";
 
 export default function Home({ data }: IHomeProps) {
  const {info, results: defaultResults = [] } = data

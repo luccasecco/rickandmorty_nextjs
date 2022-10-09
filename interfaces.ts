@@ -23,6 +23,10 @@ export interface ICharProps {
   }
 }
 
+export interface IHeaderProps {
+  toggleTheme: () => void
+}
+
 export interface IHomeProps{
   data: {
     info: {

@@ -4,13 +4,9 @@ import { ThemeContext } from 'styled-components'
 import { Container } from '../styles/components/header';
 import { Moon, Sun } from 'phosphor-react';
 import Link from 'next/link';
+import { IHeaderProps } from '../../interfaces';
 
-interface HeaderProps {
-  toggleTheme: () => void
-}
-
-
-export function Header({toggleTheme}: HeaderProps){
+export function Header({toggleTheme}: IHeaderProps){
   const { colors, title } = useContext(ThemeContext)
 
   return(

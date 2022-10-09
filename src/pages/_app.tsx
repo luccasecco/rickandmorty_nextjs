@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
+import { Header } from "../components/Header";
 
 import { ThemeProvider } from "styled-components";
-import { Header } from "../components/Header";
 import { GlobalStyle } from "../styles/global";
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
