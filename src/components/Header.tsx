@@ -1,11 +1,14 @@
-import Switch from 'react-switch';
 import { useContext } from "react";
-import { ThemeContext } from 'styled-components'
-import { Container } from '../styles/components/header';
-import { Moon, Sun } from 'phosphor-react';
+import Switch from 'react-switch';
 import Link from 'next/link';
+
+import { Moon, Sun } from 'phosphor-react';
+
 import { IHeaderProps } from '../../interfaces';
 import Image from 'next/image';
+
+import { ThemeContext } from 'styled-components'
+import { Container } from '../styles/components/header';
 
 import logoImgDark from '../../public/logoDarkMode.png'
 import logoImgLight from '../../public/logoLightMode.png'

@@ -1,6 +1,8 @@
 import { Alien, Circle, GenderFemale, GenderMale, Person } from "phosphor-react";
 import Link from 'next/link';
+
 import { ICardProps } from "../../interfaces";
+
 import { Container, ImgBox } from "../styles/components/card";
 
 export function Card({
