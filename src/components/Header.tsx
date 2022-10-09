@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { ThemeContext } from 'styled-components'
 import { Container } from '../styles/components/header';
 import { Moon, Sun } from 'phosphor-react';
+import Link from 'next/link';
 
 interface HeaderProps {
   toggleTheme: () => void
@@ -15,7 +16,9 @@ export function Header({toggleTheme}: HeaderProps){
   return(
     <Container>
       <div className="content">
-        <h1>RickAndMorty</h1>
+        <Link href="/">
+          <h1>RickAndMorty</h1>
+        </Link>
         <Switch 
               className="switch"
               onChange={toggleTheme}

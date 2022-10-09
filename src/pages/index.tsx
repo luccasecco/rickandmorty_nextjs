@@ -19,11 +19,14 @@ export default function Home({ data }) {
  const [characterFiltered, setCharacterFiltered] = useState<ICardProps[]>([])
  const [results, setResults] = useState<ICardProps[]>(defaultResults)
  const [page, setPage] = useState({
-  ...info,
-  current: apiUrl
- })
+   ...info,
+   current: apiUrl
+  })
+  
+  const arr = results.map(item => item.name)
+  const filteredArr = arr.filter((item, i) => arr.indexOf(item) === i)
 
- const { current } = page
+  const { current } = page
 
  function handleSearchCharByName(event: ChangeEvent<HTMLInputElement>) {
     event.preventDefault()
@@ -36,19 +39,13 @@ export default function Home({ data }) {
     setCharacterSelected(result)
   }
 
-  function handleFilterChar(event: ChangeEvent<HTMLSelectElement>) {
+  function handleFilterCharByName(event: ChangeEvent<HTMLSelectElement>) {
     event.preventDefault()
 
     const result = results.filter(item => item.name === event.target.value)
    
     setCharacterFiltered(result)
   }
-
-  const arr = results.map(item => {
-    return item.name
-  })
-
-  const filteredArr = arr.filter((item, i) => arr.indexOf(item) === i)
 
   useEffect(() => {
     if(current === apiUrl) return;
@@ -104,7 +101,7 @@ export default function Home({ data }) {
         <select
           name="country"
           id="country"
-          onChange={handleFilterChar}
+          onChange={handleFilterCharByName}
         >
           <option value="">
             All Characters
@@ -124,8 +121,9 @@ export default function Home({ data }) {
 
 
         </select>
-
       </div>
+
+    
 
       <Container>
         {characterSelected.length === 0 && characterFiltered.length === 0 ? results.map(item => {

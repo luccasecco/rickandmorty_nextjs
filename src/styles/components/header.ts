@@ -4,6 +4,15 @@ export const Container = styled.header`
   max-width: 100%;
   padding: 2rem 5rem;
   background: ${props => props.theme.colors.primary};
+
+  h1 {
+    cursor: pointer;
+    transition: filter 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  };
   
   .content {
     display: flex;
