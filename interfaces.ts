@@ -23,7 +23,7 @@ export interface ICharProps {
   }
 }
 
-export interface HomeProps{
+export interface IHomeProps{
   data: {
     info: {
       next: string;

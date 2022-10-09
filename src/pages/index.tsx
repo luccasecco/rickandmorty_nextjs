@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { apiUrl } from "./api/url";
 
-import { HomeProps, ICardProps } from "../../interfaces";
+import { IHomeProps, ICardProps } from "../../interfaces";
 
 import { Card } from "../components/Card";
 
@@ -11,7 +11,7 @@ import { Container, Content } from "../styles/pages/home";
 import { MagnifyingGlass, PlusCircle } from "phosphor-react";
 import { ChangeEvent, useEffect, useState } from "react";
 
-export default function Home({ data }: HomeProps) {
+export default function Home({ data }: IHomeProps) {
  const {info, results: defaultResults = [] } = data
  const [characterSelected, setCharacterSelected] = useState<ICardProps[]>([])
  const [characterFiltered, setCharacterFiltered] = useState<ICardProps[]>([])
