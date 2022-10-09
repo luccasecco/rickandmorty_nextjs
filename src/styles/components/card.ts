@@ -19,7 +19,6 @@ export const Container = styled.a`
   p {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
   };
 
@@ -33,7 +32,7 @@ export const Container = styled.a`
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.5rem;
   };
 `;
 

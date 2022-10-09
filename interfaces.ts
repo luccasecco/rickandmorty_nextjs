@@ -3,6 +3,8 @@ export interface ICardProps {
   name: string;
   image : string;
   status: string;
+  species: string;
+  gender: string;
 }
 export interface ICharProps {
   character: {

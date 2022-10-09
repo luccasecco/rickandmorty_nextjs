@@ -16,7 +16,7 @@ interface HomeProps extends ICardProps{}
 export default function Home({ data }) {
  const {info, results: defaultResults = [] } = data
  const [characterSelected, setCharacterSelected] = useState<ICardProps[]>([])
- const [characterByStatus, setCharacterByStatus] = useState<ICardProps[]>([])
+ const [characterFiltered, setCharacterFiltered] = useState<ICardProps[]>([])
  const [results, setResults] = useState<ICardProps[]>(defaultResults)
  const [page, setPage] = useState({
   ...info,
@@ -36,14 +36,18 @@ export default function Home({ data }) {
     setCharacterSelected(result)
   }
 
-  function handleFilterCharByStatus(event: any) {
+  function handleFilterChar(event: any) {
     event.preventDefault()
 
-    const result = results.filter(item => item.status === event.target.value);
-    setCharacterByStatus(result)
+    const result = results.filter(item => item.name === event.target.value)
+   
+    setCharacterFiltered(result)
   }
 
-  const arr = results.map(item => item.status)
+  const arr = results.map(item => {
+    return item.name
+  })
+
   const filteredArr = arr.filter((item, i) => arr.indexOf(item) === i)
 
   useEffect(() => {
@@ -82,7 +86,7 @@ export default function Home({ data }) {
     })
 
     setCharacterSelected([]);
-    setCharacterByStatus([]);
+    setCharacterFiltered([]);
   }
 
   return (
@@ -100,25 +104,31 @@ export default function Home({ data }) {
         <select
           name="country"
           id="country"
-          onChange={handleFilterCharByStatus}
+          onChange={handleFilterChar}
         >
           <option value="">
             All Characters
           </option>
 
           {filteredArr.map(item => {
-            return <option
+            return (
+            
+            <option
               key={item}
             >
               {item}
             </option>
+            
+            )
           })}
 
+
         </select>
+
       </div>
 
       <Container>
-        {characterSelected.length === 0 && characterByStatus.length === 0 ? results.map(item => {
+        {characterSelected.length === 0 && characterFiltered.length === 0 ? results.map(item => {
           return (
             <Link 
               key={item.id}
@@ -128,11 +138,13 @@ export default function Home({ data }) {
                 id={item.id}
                 image={item.image}
                 name={item.name.length <= 12 ? item.name : item.name.slice(0, 12) + '...'}
-                status={item.status}         
+                status={item.status} 
+                species={item.species} 
+                gender={item.gender}      
               />
             </Link>
           )
-        }) : characterByStatus.length === 0 ? characterSelected.map(item => {
+        }) : characterFiltered.length === 0 ? characterSelected.map(item => {
           return (
             <Link 
             key={item.id}
@@ -142,11 +154,13 @@ export default function Home({ data }) {
               id={item.id}
               image={item.image}
               name={item.name.length <= 12 ? item.name : item.name.slice(0, 12) + '...'}
-              status={item.status}        
+              status={item.status} 
+              species={item.species}
+              gender={item.gender}            
             />
           </Link>
           )
-        }) : characterByStatus.map(item => {
+        }) : characterFiltered.map(item => {
           return (
             <Link 
             key={item.id}
@@ -156,7 +170,9 @@ export default function Home({ data }) {
               id={item.id}
               image={item.image}
               name={item.name.length <= 12 ? item.name : item.name.slice(0, 12) + '...'}
-              status={item.status}        
+              status={item.status}
+              species={item.species} 
+              gender={item.gender}      
             />
           </Link>
           )
