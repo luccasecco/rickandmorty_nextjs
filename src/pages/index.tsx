@@ -17,7 +17,7 @@ export default function Home({ data }) {
  const {info, results: defaultResults = [] } = data
  const [characterSelected, setCharacterSelected] = useState<ICardProps[]>([])
  const [characterByStatus, setCharacterByStatus] = useState<ICardProps[]>([])
- const [results, setResults] = useState(defaultResults)
+ const [results, setResults] = useState<ICardProps[]>(defaultResults)
  const [page, setPage] = useState({
   ...info,
   current: apiUrl
@@ -128,9 +128,7 @@ export default function Home({ data }) {
                 id={item.id}
                 image={item.image}
                 name={item.name.length <= 12 ? item.name : item.name.slice(0, 12) + '...'}
-                status={item.status}
-                species={item.species}
-                gender={item.gender}          
+                status={item.status}         
               />
             </Link>
           )
@@ -144,9 +142,7 @@ export default function Home({ data }) {
               id={item.id}
               image={item.image}
               name={item.name.length <= 12 ? item.name : item.name.slice(0, 12) + '...'}
-              status={item.status}
-              species={item.species}
-              gender={item.gender}          
+              status={item.status}        
             />
           </Link>
           )
@@ -160,9 +156,7 @@ export default function Home({ data }) {
               id={item.id}
               image={item.image}
               name={item.name.length <= 12 ? item.name : item.name.slice(0, 12) + '...'}
-              status={item.status}
-              species={item.species}
-              gender={item.gender}          
+              status={item.status}        
             />
           </Link>
           )

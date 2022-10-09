@@ -1,10 +1,11 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "phosphor-react";
+import { ICharProps } from "../../../interfaces";
 import { Container, Content } from "../../styles/pages/char";
 import { apiUrl } from "../api/url";
 
-export default function Char({ character }){
+export default function Char({ character }: ICharProps){
   
   return(
     <Container>
