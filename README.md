@@ -23,7 +23,7 @@
 ### 1) Clone o projeto
 `git clone https://github.com/luccasecco/rickandmorty_nextjs.git`
 
-### 2) Vá para o diretório do projeto
+### 2) Acesse o diretório do projeto
 `cd rickandmorty_nextjs`
 
 ### 3) Instale as dependências
