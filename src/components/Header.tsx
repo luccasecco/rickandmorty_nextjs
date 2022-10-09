@@ -5,6 +5,10 @@ import { Container } from '../styles/components/header';
 import { Moon, Sun } from 'phosphor-react';
 import Link from 'next/link';
 import { IHeaderProps } from '../../interfaces';
+import Image from 'next/image';
+
+import logoImgDark from '../../public/logoDarkMode.png'
+import logoImgLight from '../../public/logoLightMode.png'
 
 export function Header({toggleTheme}: IHeaderProps){
   const { colors, title } = useContext(ThemeContext)
@@ -12,8 +16,14 @@ export function Header({toggleTheme}: IHeaderProps){
   return(
     <Container>
       <div className="content">
+          <Image 
+            src={title === 'dark' ? logoImgDark : logoImgLight} 
+            width={title === 'dark' ? 80 : 100} 
+            height={70}
+          />
+
         <Link href="/">
-          <h1>RickAndMorty</h1>
+          <h1>Rick And Morty</h1>
         </Link>
         <Switch 
               className="switch"

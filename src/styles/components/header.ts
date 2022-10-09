@@ -2,10 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   max-width: 100%;
-  padding: 2rem 5rem;
+  padding: 1.5rem 0;
   background: ${props => props.theme.colors.primary};
 
-  h1 {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75rem;
+    margin: 0 auto;
+    color: ${props => props.theme.title};
+
+    h1 {
     cursor: pointer;
     transition: filter 0.2s;
 
@@ -13,14 +21,6 @@ export const Container = styled.header`
       transform: scale(1.1);
     }
   };
-  
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 75rem;
-    margin: 0 auto;
-    color: ${props => props.theme.title};
 
     a{
       text-decoration: none;
@@ -43,10 +43,14 @@ export const Container = styled.header`
     
     @media (max-width: 1000px) {
       max-width: 100%;
-      flex-direction: column;
       font-size: 0.7rem;
       text-align: center;
+      justify-content: center;
       gap: 1rem;
+
+      h1 {
+        display: none;
+      }
     };
   };
 `
