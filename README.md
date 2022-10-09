@@ -32,6 +32,14 @@
 ### 3) Inicialize o projeto
 `npm run dev`
 
+
+## Prévia
+
+
+https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8-b3e9-f0f8c9c22e14.mp4
+
+
+
 ## Técnicas e tecnologias utilizadas
 
 - [React](https://pt-br.reactjs.org/docs/react-component.html)
