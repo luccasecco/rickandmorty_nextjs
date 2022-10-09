@@ -2,7 +2,7 @@
 
 ![RickAndMorty-capa](https://user-images.githubusercontent.com/101674470/194730275-8cedb21b-b808-43e3-bf3e-545c04f29f75.jpg)
 
-<p align="justify">Projeto em Next.js. Faz a busca dos personagens da série de desenho animado Rick And Morty na API e renderiza em página. A aplicação permite ao usuário buscar personagem por nome bem como filtrá-los por status ("Alive", "Dead" ou "Unknow"). Quando selecionado o personagem, abre nova tela com mais informações.</p>
+<p align="justify">Projeto em Next.js. Faz a busca dos personagens da série de desenho animado Rick And Morty na API e renderiza em página. A aplicação permite ao usuário buscar personagem digitando ou selecionando nome. Quando selecionado o personagem, abre nova tela com mais informações.</p>
 
 <hr />
 
@@ -15,7 +15,7 @@
 <h2> FUNCIONALIDADES </h2>
 
 - ``Buscar personagem``: Ao digitar um nome retorna os personagens que contém o valor digitado no campo de busca.
-- ``Filtar por status``: Ao selecionar opção de status (vivo, morto ou desconhecido) retorna personagens correspondentes.
+- ``Filtar por nome``: Ao selecionar opção de nome retorna personagem correspondente.
 - ``Selecionar personagem``: Ao clicar em um personagem abre nova página com descrições sobre o item selecionado.
 
 <h2> ACESSO AO PROJETO </h2>
@@ -36,7 +36,11 @@
 <h2> PRÉVIA </h2>
 
 
-https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8-b3e9-f0f8c9c22e14.mp4
+
+
+https://user-images.githubusercontent.com/101674470/194778927-c018a877-7a77-49a5-af8c-90bbdcaf4983.mp4
+
+
 
 
 
