@@ -12,13 +12,13 @@
 
 <hr />
 
-## Funcionalidades
+<h2> FUNCIONALIDADES </h2>
 
 - ``Buscar personagem``: Ao digitar um nome retorna os personagens que contém o valor digitado no campo de busca.
 - ``Filtar por status``: Ao selecionar opção de status (vivo, morto ou desconhecido) retorna personagens correspondentes.
 - ``Selecionar personagem``: Ao clicar em um personagem abre nova página com descrições sobre o item selecionado.
 
-## Acesso ao projeto
+<h2> ACESSO AO PROJETO </h2>
 
 ### 1) Clone o projeto
 `git clone https://github.com/luccasecco/rickandmorty_nextjs.git`
@@ -33,14 +33,14 @@
 `npm run dev`
 
 
-## Prévia
+<h2> PRÉVIA </h2>
 
 
 https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8-b3e9-f0f8c9c22e14.mp4
 
 
 
-## Técnicas e tecnologias utilizadas
+<h2> TÉCNICAS E TECNOLOGIAS UTILIZADAS </h2>
 
 - [React](https://pt-br.reactjs.org/docs/react-component.html)
 - [Next.js](https://nextjs.org/)
@@ -49,9 +49,9 @@ https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8
 - [React-switch](https://www.npmjs.com/package/react-switch)
 
 
-# Autor
+<h2> AUTOR </h2>
 
-<div align="center">
+<div>
 <table>
  <td align="center">
       <a href="http://github.com/luccasecco/">
@@ -71,7 +71,7 @@ https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8
 
 <hr />
 
-<p align="center">
+<p>
    <a href="https://www.linkedin.com/in/luccaseccodev/">
       <img alt="Lucca Secco" src="https://img.shields.io/badge/-Lucca Secco-2A2C39?style=flat&logo=Linkedin&logoColor=white" />
    </a>
