@@ -15,7 +15,7 @@ export default function Char({ character }: ICharProps){
         </Link>
       </div>
       <Content>
-        <div className="content">
+        {character && <div className="content">
           <img src={character.image} alt={character.name} width={320}/>
           <div className="text">
             <h1>{character.name}</h1>
@@ -26,7 +26,7 @@ export default function Char({ character }: ICharProps){
             <p><strong>Location:</strong> {character.location.name}</p>
             <p><strong>Apparitions:</strong> {character.episode.length} {character.episode.length === 1 ? 'episode' : 'episodes'}</p>
           </div>
-        </div>
+        </div>}
       </Content>
     </Container>
   )
