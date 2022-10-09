@@ -51,6 +51,7 @@ https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8
 
 # Autor
 
+<div align="center">
 <table>
  <td align="center">
       <a href="http://github.com/luccasecco/">
@@ -66,6 +67,7 @@ https://user-images.githubusercontent.com/101674470/194756779-d5509348-d142-46b8
        <a href="https://www.linkedin.com/in/luccaseccodev/" title="Code">💻</a>
     </td>
 </table>
+</div>
 
 <hr />
 
