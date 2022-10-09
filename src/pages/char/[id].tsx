@@ -24,7 +24,7 @@ export default function Char({ character }: ICharProps){
             <p><strong>Gender:</strong> {character.gender}</p>
             <p><strong>Origin:</strong> {character.origin.name}</p>
             <p><strong>Location:</strong> {character.location.name}</p>
-            <p><strong>Apparitions:</strong> {character.episode.length} episodes</p>
+            <p><strong>Apparitions:</strong> {character.episode.length} {character.episode.length === 1 ? 'episode' : 'episodes'}</p>
           </div>
         </div>
       </Content>
