@@ -16,7 +16,7 @@ export default function Document(){
         />
 
         <link rel="shortcut icon" href="favicon.ico" />
-        <title>Rick And Morty</title>
+       
       </Head>
       <body>
         <Main />

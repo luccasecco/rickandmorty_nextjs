@@ -33,7 +33,7 @@ export function Card({
           </p>
           <p>
           {species === 'Human' ? 
-          <Person size={20} weight="fill" color="#262626" /> 
+          <Person size={20} weight="fill" color="#ea580c" /> 
           : 
           <Alien size={20} weight="fill" color="#facc15" />
           }

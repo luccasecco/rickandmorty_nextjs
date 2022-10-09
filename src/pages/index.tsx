@@ -9,7 +9,7 @@ import { Card } from "../components/Card";
 
 import { Container, Content } from "../styles/pages/home";
 import { MagnifyingGlass, PlusCircle } from "phosphor-react";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 interface HomeProps extends ICardProps{}
 
@@ -25,7 +25,7 @@ export default function Home({ data }) {
 
  const { current } = page
 
- function handleSearchCharByName(event: any) {
+ function handleSearchCharByName(event: ChangeEvent<HTMLInputElement>) {
     event.preventDefault()
     const str = event.target.value
     const firstLetter = str.slice(0, 1).toUpperCase()
@@ -36,7 +36,7 @@ export default function Home({ data }) {
     setCharacterSelected(result)
   }
 
-  function handleFilterChar(event: any) {
+  function handleFilterChar(event: ChangeEvent<HTMLSelectElement>) {
     event.preventDefault()
 
     const result = results.filter(item => item.name === event.target.value)
