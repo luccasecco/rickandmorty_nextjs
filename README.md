@@ -45,6 +45,7 @@ https://user-images.githubusercontent.com/101674470/194783247-87bc6af0-2143-4bed
 
 - [React](https://pt-br.reactjs.org/docs/react-component.html)
 - [Next.js](https://nextjs.org/) :arrow_right: Server Side Rendering e Static Site Generation para tratar consumo de dados da API.
+- [Typescript](https://www.typescriptlang.org/) :arrow_right: Ferramenta de desenvolvimento para garantir segurança no tratamentos dos dados.
 - [Phosphor Icons](https://phosphoricons.com/) :arrow_right: Ícones da aplicação.
 - [Styled-Components](https://styled-components.com/) :arrow_right: Estilização e temas.
 - [React-switch](https://www.npmjs.com/package/react-switch) :arrow_right: Troca de tema light/dark.
