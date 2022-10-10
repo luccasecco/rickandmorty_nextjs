@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { ArrowLeft } from "phosphor-react";
 import { ICharProps } from "../../../interfaces";
@@ -9,6 +10,9 @@ export default function Char({ character }: ICharProps){
   
   return(
     <Container>
+      <Head>
+        <title>Rick And Morty | {character.name}</title>
+      </Head>
       <div className="button-wrapper">
         <Link href='/'>
           <ArrowLeft size={32} weight="bold" style={{cursor: 'pointer'}} />

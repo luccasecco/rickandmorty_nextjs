@@ -23,7 +23,7 @@ function App({ Component, pageProps }) {
   return (
   <ThemeProvider theme={theme}>
     <Head>
-      <title>Rick And Morty</title>
+      <title>Rick And Morty | Characters</title>
     </Head>
     <Header toggleTheme={toggleTheme} />
     <GlobalStyle />
