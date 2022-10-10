@@ -44,7 +44,7 @@ export const Content = styled.div`
         color: ${props => props.theme.colors.primary}
       };
 
-      @media (max-width: 768px) {
+      @media (max-width: 912px) {
         width: 20rem;
       };
    };

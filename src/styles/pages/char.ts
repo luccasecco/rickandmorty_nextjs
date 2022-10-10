@@ -29,21 +29,21 @@ export const Container = styled.main`
       &:hover {
         filter: brightness(1.1);
       };
-    
 
-    @media (max-width: 1000px) {
-      margin: 2rem auto;
-    };
-
+      @media (max-width: 1000px) {
+        margin: 2rem auto;
+      };
+      
+      @media (max-width: 385px) {
+       display: none;
+      };
   };
 
   @media (max-width: 1000px) {
     width: 100%;
   };
 
-  @media (max-width: 375px) {
-      margin: 5rem auto;
-    };
+
 `;
 
 export const Content = styled.div`
@@ -55,13 +55,13 @@ export const Content = styled.div`
   margin: auto;
   
   .content {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    margin: 3rem auto;
+    gap: 5rem;
+    margin: 4rem auto;
 
     img {
       width: 25rem;
