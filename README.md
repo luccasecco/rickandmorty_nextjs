@@ -14,9 +14,9 @@
 
 <h2> FUNCIONALIDADES </h2>
 
-- ``Buscar personagem``: Ao digitar um nome retorna os personagens que contém o valor digitado no campo de busca.
-- ``Filtar por nome``: Ao selecionar opção de nome retorna personagem correspondente.
-- ``Selecionar personagem``: Ao clicar em um personagem abre nova página com descrições sobre o item selecionado.
+- ``Buscar personagem`` :arrow_right: Ao digitar um nome retorna os personagens que contém o valor digitado no campo de busca.
+- ``Filtar por nome`` :arrow_right: Ao selecionar opção de nome retorna personagem correspondente.
+- ``Selecionar personagem`` :arrow_right: Ao clicar em um personagem abre nova página com descrições sobre o item selecionado.
 
 <h2> ACESSO AO PROJETO </h2>
 
@@ -44,10 +44,10 @@ https://user-images.githubusercontent.com/101674470/194783247-87bc6af0-2143-4bed
 <h2> TÉCNICAS E TECNOLOGIAS UTILIZADAS </h2>
 
 - [React](https://pt-br.reactjs.org/docs/react-component.html)
-- [Next.js](https://nextjs.org/)
-- [Phosphor Icons](https://phosphoricons.com/)
-- [Styled-Components](https://styled-components.com/)
-- [React-switch](https://www.npmjs.com/package/react-switch)
+- [Next.js](https://nextjs.org/) :arrow_right: Server Side Rendering e Static Site Generation para tratar consumo de dados da API.
+- [Phosphor Icons](https://phosphoricons.com/) :arrow_right: Ícones da aplicação.
+- [Styled-Components](https://styled-components.com/) :arrow_right: Estilização e temas.
+- [React-switch](https://www.npmjs.com/package/react-switch) :arrow_right: Troca de tema light/dark.
 
 
 <h2> AUTOR </h2>
@@ -56,7 +56,7 @@ https://user-images.githubusercontent.com/101674470/194783247-87bc6af0-2143-4bed
 <table>
  <td align="center">
       <a href="http://github.com/luccasecco/">
-        <img src="https://github.com/luccasecco.png" width="100px;" alt="Lucca Secco"/>
+        <img src="https://github.com/luccasecco.png" width="180px;" alt="Lucca Secco"/>
         <br />
         <sub>
           <b>Lucca Secco</b>
@@ -65,6 +65,7 @@ https://user-images.githubusercontent.com/101674470/194783247-87bc6af0-2143-4bed
        <br />
        <a href="https://www.linkedin.com/in/luccaseccodev/" title="Linkedin">@luccasecco</a>
        <br />
+       <p>Desenvolvedor Front End</p>
        <a href="https://www.linkedin.com/in/luccaseccodev/" title="Code">💻</a>
     </td>
 </table>
