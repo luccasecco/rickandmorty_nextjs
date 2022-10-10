@@ -51,7 +51,7 @@ export const Content = styled.div`
 
    label {
       @media (max-width: 280px) {
-        display: none;
+        width: 10rem;
       };
    };
 
@@ -67,6 +67,14 @@ export const Content = styled.div`
   
       &:focus {
         outline: 0;
+      };
+
+      @media (max-width: 280px) {
+        width: 5.8rem;
+
+        &::placeholder {
+          font-size: .5rem;
+      };
       };
     };
 
@@ -84,19 +92,18 @@ export const Content = styled.div`
         box-shadow: 0 2px 2px 2px ${props => props.theme.colors.primary};
       };
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         display: none;
        };
     };
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
       padding: 0 2%;
       justify-content: center;
       width: 20%;
       margin: 1rem auto;
     };
-
   };
 
   button {

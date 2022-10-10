@@ -34,6 +34,19 @@ export const Container = styled.a`
     flex-direction: column;
     gap: 0.5rem;
   };
+
+  @media (max-width: 280px){
+    width: 12rem;
+    margin-top: 0;
+
+    h1{
+      font-size: .875rem;
+    }
+
+    p{
+      font-size: .875rem;
+    }
+  }
 `;
 
 export const ImgBox = styled.a`
@@ -47,5 +60,10 @@ export const ImgBox = styled.a`
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     cursor: pointer;
+
+    @media (max-width: 280px){
+    width: 10rem;
+    height: 10rem;
+  }
   };
 `;

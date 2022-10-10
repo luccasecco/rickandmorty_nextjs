@@ -34,12 +34,16 @@ export const Container = styled.main`
     @media (max-width: 1000px) {
       margin: 2rem auto;
     };
+
   };
 
   @media (max-width: 1000px) {
-    margin: 0;
     width: 100%;
   };
+
+  @media (max-width: 375px) {
+      margin: 5rem auto;
+    };
 `;
 
 export const Content = styled.div`
@@ -93,14 +97,14 @@ export const Content = styled.div`
       };
     };
 
-    @media (max-width: 1000px) {
+    @media (max-width: 10024px) {
         max-width: 90%;
         padding: 0 2%;
         justify-content: center;
       };
   };
   
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         flex-direction: column;
         max-width: 100%;
         margin: 0;

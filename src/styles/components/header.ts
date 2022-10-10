@@ -41,16 +41,20 @@ export const Container = styled.header`
       };
     };
     
-    @media (max-width: 1000px) {
-      max-width: 100%;
+    @media (max-width: 1024px) {
+      width: 100vw;
       font-size: 0.7rem;
       text-align: center;
       justify-content: center;
       gap: 1rem;
+    };
+
+    @media (max-width: 360px){
+      width: 80vw;
 
       h1 {
         display: none;
       }
-    };
+    }
   };
 `
