@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useEffect, useState } from "react";
 
 import { Header } from "../components/Header";
@@ -22,9 +21,6 @@ function App({ Component, pageProps }) {
   
   return (
   <ThemeProvider theme={theme}>
-    <Head>
-      <title>Rick And Morty | Characters</title>
-    </Head>
     <Header toggleTheme={toggleTheme} />
     <GlobalStyle />
     {isMounted && <Component {...pageProps} />}

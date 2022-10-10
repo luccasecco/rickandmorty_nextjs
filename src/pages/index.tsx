@@ -10,6 +10,7 @@ import { Card } from "../components/Card";
 
 import { Container, Content } from "../styles/pages/home";
 import { MagnifyingGlass, PlusCircle } from "phosphor-react";
+import Head from 'next/head';
 
 export default function Home({ data }: IHomeProps) {
  const {info, results: defaultResults = [] } = data
@@ -86,6 +87,9 @@ export default function Home({ data }: IHomeProps) {
 
   return (
     <Content>
+      <Head>
+        <title>Rick And Morty | Characters</title>
+      </Head>
       <div className="search-box">
         <label htmlFor="search-country">
           <MagnifyingGlass size={20} />
